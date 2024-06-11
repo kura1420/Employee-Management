@@ -1,31 +1,55 @@
 {
-	"title" : "Retail",
+	"title" : "Home",
 	"disabled" : false,
 	"modules" : [
 		{
-			"title" : "Master Data",
-			"icon" : "icon-hrmaster-white.png",
-			"disabled" : false,
-			"modules" : [
-				"hrms/master/edu",
-				"hrms/master/marital",
-				"hrms/master/hrstatus",
-				"hrms/master/hrgrd",
-				"hrms/master/hrsection",
-				"hrms/master/hrjob",
-				"hrms/master/empl",
-				"hrms/master/empluser"
-			]					
-		},
-		{
-			"title" : "Payroll",
-			"modules" : [
-				"hrms/payroll/consol01"
+			"title" : "Global",
+			"modules": [
+				{
+					"title": "General",
+					"modules": [
+						"global/general/period",
+						"global/general/gender",
+						"global/general/bloodtype",
+						"global/general/religion",
+						"global/general/marital",
+						"global/general/worktype",
+						"global/general/card",
+						"global/general/pendidikan",
+						"global/general/hubkel"
+					]
+				},
+				{
+					"title": "Region",
+					"modules": [
+						"global/region/countries",
+						"global/region/provinces",
+						"global/region/regencies",
+						"global/region/districts",
+						"global/region/villages"
+					]
+				}
 			]
 		},
+		{
+			"title" : "HRMS",
+			"modules" : [
+				{
+					"title" : "Master",
+					"modules" : [
+						"hrms/master/dept",
+						"hrms/master/divisi",
+						"hrms/master/jenkonpeg",
+						"hrms/master/jabatan",
+						"hrms/master/tupoksi",
+						"hrms/master/penempatan",
+						"hrms/master/pegawai"
+					]
+				},
 
-		"hrms/hrd/locchangereq"
 
-		
+				"hrms/transaction/konpeg"
+			]
+		}
 	]
 }

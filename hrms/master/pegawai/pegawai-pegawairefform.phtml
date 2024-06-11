@@ -1,0 +1,91 @@
+<div id="pnl_editpegawairefform">
+	<div class="fgta-page-title" style="display: flex; align-items: center ">
+		<div id="pnl_editpegawairefform-caption">{{STATE_BEG}}Referensi{{STATE_END}}</div>
+		<a id="pnl_editpegawairefform-btn_edit" href="javascript:void(0)" class="easyui-linkbutton fgta-button-edit" style="margin-left:10px;" data-options="plain:true,iconCls:'fgta-icon-edit'">edit</a>
+	</div>
+	<div id="pnl_editpegawairefform-title" class="fgta-page-subtitle">XXXXXXX</div>
+
+
+	<form id="pnl_editpegawairefform-form">
+
+		<div class="form_row pnl_editpegawairefform_row" style="display: none">
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">ID</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_editpegawairefform-txt_pegawairef_id" class="easyui-textbox" mapping="pegawairef_id"  maxlength="36"  style="width: 400px" data-options="prompt: 'ID'  ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_editpegawairefform_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Nama</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_editpegawairefform-txt_pegawairef_nama" class="easyui-textbox" mapping="pegawairef_nama"  maxlength="255"  style="width: 400px" data-options="prompt: 'Nama' , required: true, invalidMessage: 'Nama is required' ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_editpegawairefform_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Hubungan</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_editpegawairefform-txt_pegawairef_hubungan" class="easyui-textbox" mapping="pegawairef_hubungan"  maxlength="255"  style="width: 400px" data-options="prompt: 'Hubungan' , required: true, invalidMessage: 'Hubungan is required' ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_editpegawairefform_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">No. Handphone</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_editpegawairefform-txt_pegawairef_handphone" class="easyui-textbox" mapping="pegawairef_handphone"  maxlength="20"  style="width: 400px" data-options="prompt: 'No. Handphone'  ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_editpegawairefform_row" style="display: none">
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Number ID</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_editpegawairefform-txt_pegawai_id" class="easyui-textbox" mapping="pegawai_id"  maxlength="36"  style="width: 400px" data-options="prompt: 'Number ID'  ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+	</form>
+
+
+	<div class="form_row" style="margin-top: 30px">
+		<div class="form_label_col"></div>
+		<div class="form_input_col" style="border: 0px solid black">
+			<div style="margin-bottom: 10px">
+				<input id="pnl_editpegawairefform-autoadd" type="checkbox"><label for="pnl_editpegawairefform-autoadd">Otomatis tambah baru setelah berhasil disimpan</label>
+			</div>
+			<div>
+				<a id="pnl_editpegawairefform-btn_save" class="easyui-linkbutton c1 fgta-button-save" style="width: 100px">Simpan</a>
+			</div>
+		</div>
+	</div>	
+
+
+	<?php
+	$custombuttonbar = __DIR__.'/pegawai-pegawairefform-custombuttonbar.phtml';
+	if (is_file($custombuttonbar)) {
+		include $custombuttonbar;
+	} else { ?>
+	<div id="pnl_editpegawairefform-buttonbar" style="margin-top: 30px; margin-left:-5px; margin-right: -5px; background-color: #cccccc; height: 40px; display: flex; justify-content: space-between; padding: 5px 2px 2px 2px ">
+		<div id="pnl_editpegawairefform-buttonbar-left">
+			<a id="pnl_editpegawairefform-btn_prev" class="easyui-linkbutton c8 fgta-button-detilprev" style="width: 50px">Prev</a>
+			<a id="pnl_editpegawairefform-btn_next" class="easyui-linkbutton c8 fgta-button-detilnext" style="width: 50px">Next</a>
+		</div>
+
+		<div id="pnl_editpegawairefform-buttonbar-middle">
+			<a id="pnl_editpegawairefform-btn_addnew" class="easyui-linkbutton c8 fgta-button-detiladd" style="width: 100px">Tambah Baru</a>
+		</div>
+
+		<div id="pnl_editpegawairefform-buttonbar-right">
+			<a id="pnl_editpegawairefform-btn_delete" class="easyui-linkbutton c5" style="width: 100px">Hapus</a>
+		</div>
+	</div>
+	<?php } ?>
+
+
+
+
+</div>	

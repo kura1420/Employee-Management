@@ -1,0 +1,185 @@
+<div id="pnl_edit">
+	<div class="fgta-page-title" style="display: flex; align-items: center ">
+		<div id="pnl_edit-caption">{{STATE_BEG}}Kontrak Pegawai{{STATE_END}}</div>
+		<a id="pnl_edit-btn_edit" href="javascript:void(0)" class="easyui-linkbutton fgta-button-edit" style="margin-left:10px;" data-options="plain:true,iconCls:'fgta-icon-edit'">edit</a>
+	</div>
+
+
+	<form id="pnl_edit-form">
+
+		<div class="form_row pnl_edit_row" style="display: none">
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">ID</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-txt_konpeg_id" class="easyui-textbox" mapping="konpeg_id" uppercase="true" maxlength="36" style="width: 400px" data-options="prompt: 'ID'  ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Pegawai</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_pegawai_id" class="easyui-combo" style="width: 400px" mapping="pegawai_id" display="pegawai_nama" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Pegawai required', prompt: '-- PILIH --'"   validType="requiredcombo['pnl_edit-cbo_pegawai_id']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Dept</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_dept_id" class="easyui-combo" style="width: 400px" mapping="dept_id" display="dept_name" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Dept required', prompt: '-- PILIH --'"   validType="requiredcombo['pnl_edit-cbo_dept_id']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Divisi</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_divisi_id" class="easyui-combo" style="width: 400px" mapping="divisi_id" display="divisi_name" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Divisi required', prompt: '-- PILIH --'"   validType="requiredcombo['pnl_edit-cbo_divisi_id']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Jabatan</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_jabatan_id" class="easyui-combo" style="width: 400px" mapping="jabatan_id" display="jabatan_nama" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Jabatan required', prompt: '-- PILIH --'"   validType="requiredcombo['pnl_edit-cbo_jabatan_id']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Penempatan</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_penempatan_id" class="easyui-combo" style="width: 400px" mapping="penempatan_id" display="penempatan_nama" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Penempatan required', prompt: '-- PILIH --'"   validType="requiredcombo['pnl_edit-cbo_penempatan_id']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Jenis Kontrak</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_jenkonpeg_id" class="easyui-combo" style="width: 400px" mapping="jenkonpeg_id" display="jenkonpeg_name" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Jenis Kontrak required', prompt: '-- PILIH --'"   validType="requiredcombo['pnl_edit-cbo_jenkonpeg_id']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Periode Kontrak</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-txt_konpeg_periodval" class="easyui-numberbox" mapping="konpeg_periodval" style="width: 400px; text-align:right" data-options="precision: 0, decimalSeparator:'.', groupSeparator:','  , required: true, invalidMessage: 'Periode Kontrak is required'">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Periode</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_period_id" class="easyui-combo" style="width: 400px" mapping="period_id" display="period_name" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Periode required', prompt: '-- PILIH --'"   validType="requiredcombo['pnl_edit-cbo_period_id']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Tgl. Bergabung</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-dt_konpeg_dtmulai" class="easyui-datebox" style="width: 400px" mapping="konpeg_dtmulai" data-options="editable:false , required: true, invalidMessage: 'Tgl. Bergabung is required'">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Tgl. Berakhir</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-dt_konpeg_dtberakhir" class="easyui-datebox" style="width: 400px" mapping="konpeg_dtberakhir" data-options="editable:false , disabled: true">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"></div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-chk_konpeg_isextend" class="easyui-checkbox c1" mapping="konpeg_isextend" data-options="label: 'isExtend', labelPosition: 'after', checked: false ">
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"></div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-chk_konpeg_iswork" class="easyui-checkbox c1" mapping="konpeg_iswork" data-options="label: 'isWork', labelPosition: 'after', checked: false , disabled: true">
+			</div>
+		</div>
+
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Attach</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-fl_konpeg_file" class="easyui-filebox" mapping="konpeg_file" style="width: 400px" data-options="multiline: false , required: false, invalidMessage: '' ">
+				<div style="display: flex;">
+					<a class="filedownloadlink" id="pnl_edit-fl_konpeg_file_link" style="cursor:pointer; margin-right: 10px; display: none">Download File</a>	
+					<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;">*File Surat Pernajian/Perintah Kerja</div>
+				</div>
+				<img id="pnl_edit-fl_konpeg_file_img" style="width: 200px; width: 200px; border: 1px solid: #ccc; display:none">				
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Work Execute At</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-txt_konpeg_workat" class="easyui-textbox" mapping="konpeg_workat"   style="width: 400px" data-options="prompt: 'Work Execute At' , disabled: true ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Work Execute By</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-txt_konpeg_workby" class="easyui-textbox" mapping="konpeg_workby"  maxlength="14" style="width: 400px" data-options="prompt: 'Work Execute By' , disabled: true ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Catatan</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-txt_konpeg_catatan" class="easyui-textbox" mapping="konpeg_catatan"  maxlength="25555" style="width: 400px; height: 180px;" data-options="prompt: 'Catatan' , multiline: true ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+	</form>
+
+
+	<div class="form_row" style="margin-top: 30px">
+		<div class="form_label_col"></div>
+		<div class="form_input_col" style="border: 0px solid black">
+			<a id="pnl_edit-btn_save" class="easyui-linkbutton c1 fgta-button-save" style="width">Simpan</a>
+		</div>
+	</div>	
+
+
+
+
+
+	<div style="margin-top: 30px; margin-left:-5px; margin-right: -5px; background-color: #cccccc; display: flex; justify-content: space-between; padding: 10px 2px 2px 2px ">
+		<div>
+			<!-- letakkan tombol-tombol xtion disini -->
+			<?php
+			$customheaderxtion = __DIR__.'/konpeg-edit-customxtion.phtml'; 
+			if (is_file($customheaderxtion)) {
+				include $customheaderxtion;
+			} else { ?>
+			<a id="pnl_edit-btn_print" href="javascript:void(0)" class="easyui-linkbutton c8" style="margin-left:10px; margin-bottom: 10px;" data-options="iconCls:'icon-print'">print</a>
+			
+			
+							<a id="pnl_edit-btn_work" href="javascript:void(0)" class="easyui-linkbutton c8" style="width: 80px; margin-left:10px; margin-bottom: 10px;" data-options="plain:true">isWork</a>
+				<a id="pnl_edit-btn_unwork" href="javascript:void(0)" class="easyui-linkbutton c8" style="width: 80px; margin-left:10px; margin-bottom: 10px;" data-options="plain:true">Unwork</a>
+
+			<?php } ?>
+		</div>
+		<div>
+			<a id="pnl_edit-btn_delete" class="easyui-linkbutton c5 fgta-button-delete" style="margin-bottom: 10px; margin-right: 10px">Hapus</a>
+		</div>
+	</div>
+
+</div>
+

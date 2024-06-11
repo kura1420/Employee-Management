@@ -1,0 +1,12 @@
+<?php require_once dirname(__FILE__).'/villages-list.phtml' ?>
+<?php require_once dirname(__FILE__).'/villages-edit.phtml' ?>
+
+
+
+<?php
+$customrecordstatus = __DIR__.'/villages-customrecordstatus.phtml'; 
+if (is_file($customrecordstatus)) {
+	include $customrecordstatus;
+} else { ?>
+
+<?php } ?>

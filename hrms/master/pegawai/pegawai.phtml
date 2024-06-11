@@ -1,0 +1,30 @@
+<?php require_once dirname(__FILE__).'/pegawai-list.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-edit.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-pegawaialmtgrid.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-pegawaialmtform.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-pegawaicardgrid.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-pegawaicardform.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-pegawaiattchgrid.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-pegawaiattchform.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-pegawaikelgrid.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-pegawaikelform.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-pegawaipnddkgrid.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-pegawaipnddkform.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-pegawaikerjagrid.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-pegawaikerjaform.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-pegawaipnddknogrid.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-pegawaipnddknoform.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-pegawaiorggrid.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-pegawaiorgform.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-pegawairefgrid.phtml' ?>
+<?php require_once dirname(__FILE__).'/pegawai-pegawairefform.phtml' ?>
+
+
+
+<?php
+$customrecordstatus = __DIR__.'/pegawai-customrecordstatus.phtml'; 
+if (is_file($customrecordstatus)) {
+	include $customrecordstatus;
+} else { ?>
+
+<?php } ?>

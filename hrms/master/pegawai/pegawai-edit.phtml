@@ -1,0 +1,281 @@
+<div id="pnl_edit">
+	<div class="fgta-page-title" style="display: flex; align-items: center ">
+		<div id="pnl_edit-caption">{{STATE_BEG}}Pegawai{{STATE_END}}</div>
+		<a id="pnl_edit-btn_edit" href="javascript:void(0)" class="easyui-linkbutton fgta-button-edit" style="margin-left:10px;" data-options="plain:true,iconCls:'fgta-icon-edit'">edit</a>
+	</div>
+
+
+	<form id="pnl_edit-form">
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Number ID</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-txt_pegawai_id" class="easyui-textbox" mapping="pegawai_id"  maxlength="36" style="width: 400px" data-options="prompt: 'Number ID' , required: true, invalidMessage: 'Number ID is required' ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Nama Lengkap</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-txt_pegawai_nama" class="easyui-textbox" mapping="pegawai_nama"  maxlength="255" style="width: 400px" data-options="prompt: 'Nama Lengkap' , required: true, invalidMessage: 'Nama Lengkap is required' ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Email</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-txt_pegawai_email" class="easyui-textbox" mapping="pegawai_email"  maxlength="255" style="width: 400px" data-options="prompt: 'Email' , validType: 'email' ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Handphone</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-txt_pegawai_hp" class="easyui-textbox" mapping="pegawai_hp"  maxlength="20" style="width: 400px" data-options="prompt: 'Handphone' , required: true, invalidMessage: 'Handphone wajib diisi' ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Foto</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-fl_pegawai_foto" class="easyui-filebox" mapping="pegawai_foto" style="width: 400px" data-options="multiline: false , accept: 'image/*' ">
+				<div style="display: flex;">
+					<a class="filedownloadlink" id="pnl_edit-fl_pegawai_foto_link" style="cursor:pointer; margin-right: 10px; display: none">Download File</a>	
+					<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+				</div>
+				<img id="pnl_edit-fl_pegawai_foto_img" style="width: 200px; width: 200px; border: 1px solid: #ccc; display:none">				
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Kartu Identitas</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_card_id" class="easyui-combo" style="width: 400px" mapping="card_id" display="card_name" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Kartu Identitas required', prompt: '-- PILIH --'"   validType="requiredcombo['pnl_edit-cbo_card_id']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Jenis Kelamin</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_gender_id" class="easyui-combo" style="width: 400px" mapping="gender_id" display="gender_name" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Jenis Kelamin required', prompt: '-- PILIH --'"   validType="requiredcombo['pnl_edit-cbo_gender_id']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Golongan Darah</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_bloodtype_id" class="easyui-combo" style="width: 400px" mapping="bloodtype_id" display="bloodtype_name" data-options="editable:false, valueField:'id', textField:'text' , prompt: '-- PILIH --'"  >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Agama</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_religion_id" class="easyui-combo" style="width: 400px" mapping="religion_id" display="religion_name" data-options="editable:false, valueField:'id', textField:'text' , prompt: '-- PILIH --'"  >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"></div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-chk_pegawai_iswna" class="easyui-checkbox c1" mapping="pegawai_iswna" data-options="label: 'isWna', labelPosition: 'after', checked: false ">
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Negara</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_countries_id" class="easyui-combo" style="width: 400px" mapping="countries_id" display="name" data-options="editable:false, valueField:'id', textField:'text' , prompt: '-- PILIH --'"  >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Status Perkawinan</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_marital_id" class="easyui-combo" style="width: 400px" mapping="marital_id" display="marital_name" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Status Perkawinan required', prompt: '-- PILIH --'"   validType="requiredcombo['pnl_edit-cbo_marital_id']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Pendidikan Terakhir</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_pnddk_id" class="easyui-combo" style="width: 400px" mapping="pnddk_id" display="pnddk_name" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Pendidikan Terakhir required', prompt: '-- PILIH --'"   validType="requiredcombo['pnl_edit-cbo_pnddk_id']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Pekerjaan</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_worktype_id" class="easyui-combo" style="width: 400px" mapping="worktype_id" display="worktype_name" data-options="editable:false, valueField:'id', textField:'text' , prompt: '-- PILIH --'"  >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<?=$this->SectionBegin('Tempat & Tgl. Lahir', true, true, '')?>
+		<div class="fgta_section_collapsible " style="display: none">
+					
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Kota</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_pegawai_tmptlahir" class="easyui-combo" style="width: 400px" mapping="pegawai_tmptlahir" display="tmptlahir_name" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Kota required', prompt: '-- PILIH --'"   validType="requiredcombo['pnl_edit-cbo_pegawai_tmptlahir']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Tanggal</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-dt_pegawai_tgllahir" class="easyui-datebox" style="width: 400px" mapping="pegawai_tgllahir" data-options="editable:false , required: true, invalidMessage: 'Tanggal lahir wajib diisi'">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		</div>			
+		<?=$this->SectionEnd('')?>
+					
+		<?=$this->SectionBegin('Alamat Sesuai KTP', true, true, '')?>
+		<div class="fgta_section_collapsible " style="display: none">
+					
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Provinsi</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_province_id" class="easyui-combo" style="width: 400px" mapping="province_id" display="prov_name" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Provinsi required', prompt: '-- PILIH --'"   validType="requiredcombo['pnl_edit-cbo_province_id']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Kota</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_regency_id" class="easyui-combo" style="width: 400px" mapping="regency_id" display="regencies_name" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Kota required', prompt: '-- PILIH --'"   validType="requiredcombo['pnl_edit-cbo_regency_id']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Kelurahan</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_district_id" class="easyui-combo" style="width: 400px" mapping="district_id" display="districts_name" data-options="editable:false, valueField:'id', textField:'text' , prompt: '-- PILIH --'"  >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Kecamatan</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_villages_id" class="easyui-combo" style="width: 400px" mapping="villages_id" display="villagess_name" data-options="editable:false, valueField:'id', textField:'text' , prompt: '-- PILIH --'"  >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Kode POS</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-txt_pegawai_kodepos" class="easyui-numberbox" mapping="pegawai_kodepos" style="width: 400px; text-align:right" data-options="precision: 0, decimalSeparator:'.', groupSeparator:','  ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Alamat</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-txt_pegawai_alamat" class="easyui-textbox" mapping="pegawai_alamat"  maxlength="10000" style="width: 400px; height: 180px;" data-options="prompt: 'Alamat' , required: true, invalidMessage: 'Alamat is required', multiline: true ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		</div>			
+		<?=$this->SectionEnd('')?>
+					
+	</form>
+
+
+	<div class="form_row" style="margin-top: 30px">
+		<div class="form_label_col"></div>
+		<div class="form_input_col" style="border: 0px solid black">
+			<a id="pnl_edit-btn_save" class="easyui-linkbutton c1 fgta-button-save" style="width">Simpan</a>
+		</div>
+	</div>	
+
+
+
+		<div id="pnl_edit-detil" class="form_row" style="margin-top: 30px">
+			<div class="form_label_col"></div>
+			<div class="form_input_col detilbox" style="border: 0px solid black">
+				<div class="fgtable-head" style="height: 25px; padding: 5px 0px 0px 5px">Detil Informations</div>
+				<div class="fgtable-head-drow" style="height: 25px; padding: 5px 5px 0px 5px; " onclick="$ui.getPages().ITEMS['pnl_edit'].handler.detil_open('pnl_editpegawaialmtgrid')">
+					<div id="pnl_edit-txt_pegawaialmt_title" class="detilgrid-text">Alamat Sesuai Domisili</div>
+					<div id="pnl_edit-txt_pegawaialmt_value" class="detilgrid-value pegawaialmt_totalvalue">&nbsp;</div>
+				</div>
+				<div class="fgtable-head-drow" style="height: 25px; padding: 5px 5px 0px 5px; " onclick="$ui.getPages().ITEMS['pnl_edit'].handler.detil_open('pnl_editpegawaicardgrid')">
+					<div id="pnl_edit-txt_pegawaicard_title" class="detilgrid-text">Kartu</div>
+					<div id="pnl_edit-txt_pegawaicard_value" class="detilgrid-value pegawaicard_totalvalue">&nbsp;</div>
+				</div>
+				<div class="fgtable-head-drow" style="height: 25px; padding: 5px 5px 0px 5px; " onclick="$ui.getPages().ITEMS['pnl_edit'].handler.detil_open('pnl_editpegawaiattchgrid')">
+					<div id="pnl_edit-txt_pegawaiattch_title" class="detilgrid-text">Sertifikat/File Pendukung Lainnya</div>
+					<div id="pnl_edit-txt_pegawaiattch_value" class="detilgrid-value pegawaiattch_totalvalue">&nbsp;</div>
+				</div>
+				<div class="fgtable-head-drow" style="height: 25px; padding: 5px 5px 0px 5px; " onclick="$ui.getPages().ITEMS['pnl_edit'].handler.detil_open('pnl_editpegawaikelgrid')">
+					<div id="pnl_edit-txt_pegawaikel_title" class="detilgrid-text">Keluarga</div>
+					<div id="pnl_edit-txt_pegawaikel_value" class="detilgrid-value pegawaikel_totalvalue">&nbsp;</div>
+				</div>
+				<div class="fgtable-head-drow" style="height: 25px; padding: 5px 5px 0px 5px; " onclick="$ui.getPages().ITEMS['pnl_edit'].handler.detil_open('pnl_editpegawaipnddkgrid')">
+					<div id="pnl_edit-txt_pegawaipnddk_title" class="detilgrid-text">Riwayat Pendidikan</div>
+					<div id="pnl_edit-txt_pegawaipnddk_value" class="detilgrid-value pegawaipnddk_totalvalue">&nbsp;</div>
+				</div>
+				<div class="fgtable-head-drow" style="height: 25px; padding: 5px 5px 0px 5px; " onclick="$ui.getPages().ITEMS['pnl_edit'].handler.detil_open('pnl_editpegawaikerjagrid')">
+					<div id="pnl_edit-txt_pegawaikerja_title" class="detilgrid-text">Riwayat Perkejaan</div>
+					<div id="pnl_edit-txt_pegawaikerja_value" class="detilgrid-value pegawaikerja_totalvalue">&nbsp;</div>
+				</div>
+				<div class="fgtable-head-drow" style="height: 25px; padding: 5px 5px 0px 5px; " onclick="$ui.getPages().ITEMS['pnl_edit'].handler.detil_open('pnl_editpegawaipnddknogrid')">
+					<div id="pnl_edit-txt_pegawaipnddkno_title" class="detilgrid-text">Riwayat Pendidikan Non Formal</div>
+					<div id="pnl_edit-txt_pegawaipnddkno_value" class="detilgrid-value pegawaipnddkno_totalvalue">&nbsp;</div>
+				</div>
+				<div class="fgtable-head-drow" style="height: 25px; padding: 5px 5px 0px 5px; " onclick="$ui.getPages().ITEMS['pnl_edit'].handler.detil_open('pnl_editpegawaiorggrid')">
+					<div id="pnl_edit-txt_pegawaiorg_title" class="detilgrid-text">Organisasi</div>
+					<div id="pnl_edit-txt_pegawaiorg_value" class="detilgrid-value pegawaiorg_totalvalue">&nbsp;</div>
+				</div>
+				<div class="fgtable-head-drow" style="height: 25px; padding: 5px 5px 0px 5px; " onclick="$ui.getPages().ITEMS['pnl_edit'].handler.detil_open('pnl_editpegawairefgrid')">
+					<div id="pnl_edit-txt_pegawairef_title" class="detilgrid-text">Referensi</div>
+					<div id="pnl_edit-txt_pegawairef_value" class="detilgrid-value pegawairef_totalvalue">&nbsp;</div>
+				</div>
+
+			</div>		
+		</div>		
+		
+		
+
+
+	<div style="margin-top: 30px; margin-left:-5px; margin-right: -5px; background-color: #cccccc; display: flex; justify-content: space-between; padding: 10px 2px 2px 2px ">
+		<div>
+			<!-- letakkan tombol-tombol xtion disini -->
+			<?php
+			$customheaderxtion = __DIR__.'/pegawai-edit-customxtion.phtml'; 
+			if (is_file($customheaderxtion)) {
+				include $customheaderxtion;
+			} else { ?>
+			
+			
+			
+			
+			<?php } ?>
+		</div>
+		<div>
+			<a id="pnl_edit-btn_delete" class="easyui-linkbutton c5 fgta-button-delete" style="margin-bottom: 10px; margin-right: 10px">Hapus</a>
+		</div>
+	</div>
+
+</div>
+

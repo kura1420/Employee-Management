@@ -1,0 +1,120 @@
+<div id="pnl_editpegawaipnddkform">
+	<div class="fgta-page-title" style="display: flex; align-items: center ">
+		<div id="pnl_editpegawaipnddkform-caption">{{STATE_BEG}}Riwayat Pendidikan{{STATE_END}}</div>
+		<a id="pnl_editpegawaipnddkform-btn_edit" href="javascript:void(0)" class="easyui-linkbutton fgta-button-edit" style="margin-left:10px;" data-options="plain:true,iconCls:'fgta-icon-edit'">edit</a>
+	</div>
+	<div id="pnl_editpegawaipnddkform-title" class="fgta-page-subtitle">XXXXXXX</div>
+
+
+	<form id="pnl_editpegawaipnddkform-form">
+
+		<div class="form_row pnl_editpegawaipnddkform_row" style="display: none">
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">ID</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_editpegawaipnddkform-txt_pegawaipnddk_id" class="easyui-textbox" mapping="pegawaipnddk_id"  maxlength="36"  style="width: 400px" data-options="prompt: 'ID'  ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_editpegawaipnddkform_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Pendidikan</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_editpegawaipnddkform-cbo_pnddk_id" class="easyui-combo" style="width: 400px" mapping="pnddk_id" display="pnddk_name" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Pendidikan required', prompt: '-- PILIH --'"  validType="requiredcombo['pnl_editpegawaipnddkform-cbo_pnddk_id']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_editpegawaipnddkform_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Nama Tempat</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_editpegawaipnddkform-txt_pegawaipnddk_nama" class="easyui-textbox" mapping="pegawaipnddk_nama"  maxlength="255"  style="width: 400px" data-options="prompt: 'Nama Tempat' , required: true, invalidMessage: 'Nama Tempat is required' ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_editpegawaipnddkform_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Jurusan</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_editpegawaipnddkform-txt_pegawaipnddk_jurusan" class="easyui-textbox" mapping="pegawaipnddk_jurusan"  maxlength="255"  style="width: 400px" data-options="prompt: 'Jurusan'  ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_editpegawaipnddkform_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Tahun Lulus</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_editpegawaipnddkform-txt_pegawaipnddk_lulus" class="easyui-numberbox" mapping="pegawaipnddk_lulus" style="width: 400px; text-align:right" data-options="precision: 0, decimalSeparator:'.', groupSeparator:','  , required: true, invalidMessage: 'Tahun Lulus wajib diisi'">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_editpegawaipnddkform_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Kota</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_editpegawaipnddkform-cbo_regency_id" class="easyui-combo" style="width: 400px" mapping="regency_id" display="name" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Kota required', prompt: '-- PILIH --'"  validType="requiredcombo['pnl_editpegawaipnddkform-cbo_regency_id']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+
+		<div class="form_row pnl_editpegawaipnddkform_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Izasah</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_editpegawaipnddkform-fl_pegawaipnddk_file" class="easyui-filebox" mapping="pegawaipnddk_file" style="width: 400px" data-options="multiline: false  ">
+				<div style="display: flex;">
+					<a class="filedownloadlink" id="pnl_editpegawaipnddkform-fl_pegawaipnddk_file_link" style="cursor:pointer; margin-right: 10px; display: none">Download File</a>	
+					<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+				</div>
+				<img id="pnl_editpegawaipnddkform-fl_pegawaipnddk_file_img" style="width: 200px; width: 200px; border: 1px solid: #ccc; display:none">				
+			</div>
+		</div>
+
+		<div class="form_row pnl_editpegawaipnddkform_row" style="display: none">
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Number ID</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_editpegawaipnddkform-txt_pegawai_id" class="easyui-textbox" mapping="pegawai_id"  maxlength="36"  style="width: 400px" data-options="prompt: 'Number ID'  ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+	</form>
+
+
+	<div class="form_row" style="margin-top: 30px">
+		<div class="form_label_col"></div>
+		<div class="form_input_col" style="border: 0px solid black">
+			<div style="margin-bottom: 10px">
+				<input id="pnl_editpegawaipnddkform-autoadd" type="checkbox"><label for="pnl_editpegawaipnddkform-autoadd">Otomatis tambah baru setelah berhasil disimpan</label>
+			</div>
+			<div>
+				<a id="pnl_editpegawaipnddkform-btn_save" class="easyui-linkbutton c1 fgta-button-save" style="width: 100px">Simpan</a>
+			</div>
+		</div>
+	</div>	
+
+
+	<?php
+	$custombuttonbar = __DIR__.'/pegawai-pegawaipnddkform-custombuttonbar.phtml';
+	if (is_file($custombuttonbar)) {
+		include $custombuttonbar;
+	} else { ?>
+	<div id="pnl_editpegawaipnddkform-buttonbar" style="margin-top: 30px; margin-left:-5px; margin-right: -5px; background-color: #cccccc; height: 40px; display: flex; justify-content: space-between; padding: 5px 2px 2px 2px ">
+		<div id="pnl_editpegawaipnddkform-buttonbar-left">
+			<a id="pnl_editpegawaipnddkform-btn_prev" class="easyui-linkbutton c8 fgta-button-detilprev" style="width: 50px">Prev</a>
+			<a id="pnl_editpegawaipnddkform-btn_next" class="easyui-linkbutton c8 fgta-button-detilnext" style="width: 50px">Next</a>
+		</div>
+
+		<div id="pnl_editpegawaipnddkform-buttonbar-middle">
+			<a id="pnl_editpegawaipnddkform-btn_addnew" class="easyui-linkbutton c8 fgta-button-detiladd" style="width: 100px">Tambah Baru</a>
+		</div>
+
+		<div id="pnl_editpegawaipnddkform-buttonbar-right">
+			<a id="pnl_editpegawaipnddkform-btn_delete" class="easyui-linkbutton c5" style="width: 100px">Hapus</a>
+		</div>
+	</div>
+	<?php } ?>
+
+
+
+
+</div>	

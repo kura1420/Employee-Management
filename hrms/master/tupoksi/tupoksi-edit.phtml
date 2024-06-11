@@ -1,0 +1,99 @@
+<div id="pnl_edit">
+	<div class="fgta-page-title" style="display: flex; align-items: center ">
+		<div id="pnl_edit-caption">{{STATE_BEG}}TuPokSi{{STATE_END}}</div>
+		<a id="pnl_edit-btn_edit" href="javascript:void(0)" class="easyui-linkbutton fgta-button-edit" style="margin-left:10px;" data-options="plain:true,iconCls:'fgta-icon-edit'">edit</a>
+	</div>
+
+
+	<form id="pnl_edit-form">
+
+		<div class="form_row pnl_edit_row" style="display: none">
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">ID</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-txt_tupoksi_id" class="easyui-textbox" mapping="tupoksi_id"  maxlength="36" style="width: 400px" data-options="prompt: 'ID'  ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Dept</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_dept_id" class="easyui-combo" style="width: 400px" mapping="dept_id" display="dept_name" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Dept required', prompt: '-- PILIH --'"   validType="requiredcombo['pnl_edit-cbo_dept_id']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Divisi</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_divisi_id" class="easyui-combo" style="width: 400px" mapping="divisi_id" display="divisi_name" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Divisi required', prompt: '-- PILIH --'"   validType="requiredcombo['pnl_edit-cbo_divisi_id']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Jabatan</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-cbo_jabatan_id" class="easyui-combo" style="width: 400px" mapping="jabatan_id" display="jabatan_nama" data-options="editable:false, valueField:'id', textField:'text' , required: true, invalidMessage: 'Jabatan required', prompt: '-- PILIH --'"   validType="requiredcombo['pnl_edit-cbo_jabatan_id']" >
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Tugas</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-txt_tupoksi_tugas" class="easyui-textbox" mapping="tupoksi_tugas"  maxlength="10000" style="width: 400px; height: 180px;" data-options="prompt: 'Tugas' , multiline: true, required: true, invalidMessage: 'Tugas required' ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col"  style="border: 0px solid black; vertical-align: top; margin-top: 7px;">Fungsi</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-txt_tupoksi_fungsi" class="easyui-textbox" mapping="tupoksi_fungsi"  maxlength="10000" style="width: 400px; height: 180px;" data-options="prompt: 'Fungsi' , multiline: true, required: true, invalidMessage: 'Fungsi required' ">
+				<div style="margin-top: 3px; margin-bottom: 5px; font-size: 0.75em; font-style: italic; color:#54381d;"></div>
+			</div>
+		</div>
+
+		<div class="form_row pnl_edit_row" >
+			<div class="form_label_col">Status</div>
+			<div class="form_input_col" style="border: 0px solid black">
+				<input id="pnl_edit-chk_tupoksi_isdisabled" class="easyui-checkbox c1" mapping="tupoksi_isdisabled" data-options="label: 'Disabled', labelPosition: 'after', checked: false ">
+			</div>
+		</div>
+
+	</form>
+
+
+	<div class="form_row" style="margin-top: 30px">
+		<div class="form_label_col"></div>
+		<div class="form_input_col" style="border: 0px solid black">
+			<a id="pnl_edit-btn_save" class="easyui-linkbutton c1 fgta-button-save" style="width">Simpan</a>
+		</div>
+	</div>	
+
+
+
+
+
+	<div style="margin-top: 30px; margin-left:-5px; margin-right: -5px; background-color: #cccccc; display: flex; justify-content: space-between; padding: 10px 2px 2px 2px ">
+		<div>
+			<!-- letakkan tombol-tombol xtion disini -->
+			<?php
+			$customheaderxtion = __DIR__.'/tupoksi-edit-customxtion.phtml'; 
+			if (is_file($customheaderxtion)) {
+				include $customheaderxtion;
+			} else { ?>
+			
+			
+			
+			
+			<?php } ?>
+		</div>
+		<div>
+			<a id="pnl_edit-btn_delete" class="easyui-linkbutton c5 fgta-button-delete" style="margin-bottom: 10px; margin-right: 10px">Hapus</a>
+		</div>
+	</div>
+
+</div>
+

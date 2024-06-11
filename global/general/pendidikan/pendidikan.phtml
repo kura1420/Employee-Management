@@ -1,0 +1,12 @@
+<?php require_once dirname(__FILE__).'/pendidikan-list.phtml' ?>
+<?php require_once dirname(__FILE__).'/pendidikan-edit.phtml' ?>
+
+
+
+<?php
+$customrecordstatus = __DIR__.'/pendidikan-customrecordstatus.phtml'; 
+if (is_file($customrecordstatus)) {
+	include $customrecordstatus;
+} else { ?>
+
+<?php } ?>

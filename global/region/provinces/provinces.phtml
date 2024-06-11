@@ -1,0 +1,12 @@
+<?php require_once dirname(__FILE__).'/provinces-list.phtml' ?>
+<?php require_once dirname(__FILE__).'/provinces-edit.phtml' ?>
+
+
+
+<?php
+$customrecordstatus = __DIR__.'/provinces-customrecordstatus.phtml'; 
+if (is_file($customrecordstatus)) {
+	include $customrecordstatus;
+} else { ?>
+
+<?php } ?>

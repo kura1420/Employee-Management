@@ -1,0 +1,12 @@
+<?php require_once dirname(__FILE__).'/jabatan-list.phtml' ?>
+<?php require_once dirname(__FILE__).'/jabatan-edit.phtml' ?>
+
+
+
+<?php
+$customrecordstatus = __DIR__.'/jabatan-customrecordstatus.phtml'; 
+if (is_file($customrecordstatus)) {
+	include $customrecordstatus;
+} else { ?>
+
+<?php } ?>

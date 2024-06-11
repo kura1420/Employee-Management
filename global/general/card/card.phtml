@@ -1,0 +1,12 @@
+<?php require_once dirname(__FILE__).'/card-list.phtml' ?>
+<?php require_once dirname(__FILE__).'/card-edit.phtml' ?>
+
+
+
+<?php
+$customrecordstatus = __DIR__.'/card-customrecordstatus.phtml'; 
+if (is_file($customrecordstatus)) {
+	include $customrecordstatus;
+} else { ?>
+
+<?php } ?>

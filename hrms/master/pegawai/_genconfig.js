@@ -242,13 +242,13 @@ module.exports = {
 					}),
 				},
 				district_id: {
-					text:'Kelurahan', type: dbtype.varchar(36), null:true, suppresslist: true,
+					text:'Kecamatan', type: dbtype.varchar(36), null:true, suppresslist: true,
 					options:{ prompt:'-- PILIH --'},
 					comp: comp.Combo({
 						table: 'districts',
 						field_value: 'id', field_display: 'name', field_display_name: 'districts_name',
 						api: 'global/region/districts/list',
-						title: 'Daftar Kelurahan',
+						title: 'Daftar Kecamatan',
 						field_mappings: [
 							`{mapping: 'id', text: 'ID'}`,
 							`{mapping: 'name',  text: 'Name'}`,
@@ -265,13 +265,13 @@ module.exports = {
 					}),
 				},
 				villages_id: {
-					text:'Kecamatan', type: dbtype.varchar(36), null:true, suppresslist: true,
+					text:'Kelurahan', type: dbtype.varchar(36), null:true, suppresslist: true,
 					options:{ prompt:'-- PILIH --'},
 					comp: comp.Combo({
 						table: 'villages',
 						field_value: 'id', field_display: 'name', field_display_name: 'villagess_name',
 						api: 'global/region/villages/list',
-						title: 'Daftar Kecamatan',
+						title: 'Daftar Kelurahan',
 						field_mappings: [
 							`{mapping: 'id', text: 'ID'}`,
 							`{mapping: 'name',  text: 'Name'}`,
@@ -351,13 +351,13 @@ module.exports = {
 					}),
 				},
 				district_id: {
-					text:'Kelurahan', type: dbtype.varchar(36), null:true, suppresslist: false,
+					text:'Kecamatan', type: dbtype.varchar(36), null:true, suppresslist: false,
 					options:{ prompt:'-- PILIH --'},
 					comp: comp.Combo({
 						table: 'districts',
 						field_value: 'id', field_display: 'name', field_display_name: 'districts_name',
 						api: 'global/region/districts/list',
-						title: 'Daftar Kelurahan',
+						title: 'Daftar Kecamatan',
 						field_mappings: [
 							`{mapping: 'id', text: 'ID'}`,
 							`{mapping: 'name',  text: 'Name'}`,
@@ -374,13 +374,13 @@ module.exports = {
 					}),
 				},
 				villages_id: {
-					text:'Kecamatan', type: dbtype.varchar(36), null:true, suppresslist: false,
+					text:'Kelurahan', type: dbtype.varchar(36), null:true, suppresslist: false,
 					options:{ prompt:'-- PILIH --'},
 					comp: comp.Combo({
 						table: 'villages',
 						field_value: 'id', field_display: 'name', field_display_name: 'villagess_name',
 						api: 'global/region/villages/list',
-						title: 'Daftar Kecamatan',
+						title: 'Daftar Kelurahan',
 						field_mappings: [
 							`{mapping: 'id', text: 'ID'}`,
 							`{mapping: 'name',  text: 'Name'}`,

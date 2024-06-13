@@ -4,19 +4,21 @@ const dbtype = global.dbtype;
 const comp = global.comp;
 
 module.exports = {
-	title: "Kelurahan",
+	title: "Kecamatan",
 	autoid: true,
+	
+	jsonOverwrite: true,
 	
 	creatorname: "Abdul Syakur",
 	creatoremail: "a.syakur14@gmail.com", 
 	description: `
-		program untuk master districts
+		program untuk master kecamatan
 	`,
 
 	persistent: {
 		districts : {
 			primarykeys: ['id'],
-			comment: 'Daftar Kelurahan',
+			comment: 'Daftar Kecamatan',
 			data: {
 				id: {text:'ID', type: dbtype.varchar(36), null:false, uppercase: false, suppresslist:true, hidden:true,},
 				name: {text:'Nama', type: dbtype.varchar(255), null:false, uppercase: false, options:{required:true,invalidMessage:'Nama is required'}},
@@ -52,7 +54,7 @@ module.exports = {
 	},
 
 	schema: {
-		title: 'Kelurahan',
+		title: 'Kecamatan',
 		header: 'districts',
 		detils: {}
 	}

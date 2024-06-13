@@ -164,7 +164,7 @@ export async function init(opt) {
 			
 	obj.cbo_district_id.name = 'pnl_editpegawaialmtform-cbo_district_id'		
 	new fgta4slideselect(obj.cbo_district_id, {
-		title: 'Daftar Kelurahan',
+		title: 'Daftar Kecamatan',
 		returnpage: this_page_id,
 		api: $ui.apis.load_district_id,
 		fieldValue: 'district_id',
@@ -207,7 +207,7 @@ export async function init(opt) {
 			
 	obj.cbo_villages_id.name = 'pnl_editpegawaialmtform-cbo_villages_id'		
 	new fgta4slideselect(obj.cbo_villages_id, {
-		title: 'Daftar Kecamatan',
+		title: 'Daftar Kelurahan',
 		returnpage: this_page_id,
 		api: $ui.apis.load_villages_id,
 		fieldValue: 'villages_id',

@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `villages` (
 	PRIMARY KEY (`id`)
 ) 
 ENGINE=InnoDB
-COMMENT='Daftar Kecamatan';
+COMMENT='Daftar Kelurahan';
 
 
 ALTER TABLE `villages` ADD COLUMN IF NOT EXISTS  `name` varchar(255) NOT NULL  AFTER `id`;
